@@ -1,0 +1,149 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-inline: 35px;
+  padding: 2em 1em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.wrapper_list_left {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 350px;
+  background-color: #ff2e63;
+  border-radius: 15px;
+  padding: 20px 15px;
+}
+.wrapper_list_center {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 350px;
+  background-color: #7c9070;
+
+  border-radius: 15px;
+  padding: 20px 15px;
+}
+.wrapper_list_right {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 350px;
+  background-color: #252a34;
+  border-radius: 15px;
+  padding: 20px 15px;
+}
+
+.title {
+  text-align: center;
+  margin-block: 5px 15px;
+}
+
+.title_finish {
+  text-align: center;
+  margin-block: 5px 15px;
+  color: #eaeaea;
+}
+
+.title_card {
+  font-size: 20px;
+  font-weight: bold;
+  margin-block: 8px;
+}
+
+.description_card {
+  font-size: 14px;
+  margin-block: 8px 10px;
+  color: #525966;
+}
+
+.card_left {
+  position: relative;
+  background-color: #f3e99f;
+  margin-block: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.card_center {
+  position: relative;
+  background-color: #a6d0dd;
+  margin-block: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.card_right {
+  position: relative;
+  background-color: #d6e8db;
+  margin-block: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.btn {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -3px;
+  right: 20px;
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  white-space: nowrap;
+}
+
+[data-title]:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 7px;
+  display: inline-block;
+  color: #fff;
+  border: 8px solid transparent;
+  border-left: 8px solid #000;
+}
+
+i {
+  font-size: 14px;
+}
+
+i:hover {
+  color: red;
+}
+
+.select {
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #a9907e;
+  color: #eaeaea;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: grey;
+  color: #eaeaea;
+}

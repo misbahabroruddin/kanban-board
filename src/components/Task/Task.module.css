@@ -1,0 +1,72 @@
+.title_card {
+  font-size: 20px;
+  font-weight: bold;
+  margin-block: 8px;
+}
+
+.description_card {
+  font-size: 14px;
+  margin-block: 8px 10px;
+  color: #525966;
+}
+
+.btn {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  top: -3px;
+  right: 20px;
+  display: inline-block;
+  padding: 3px 6px;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+  white-space: nowrap;
+}
+
+[data-title]:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 7px;
+  display: inline-block;
+  color: #fff;
+  border: 8px solid transparent;
+  border-left: 8px solid #000;
+}
+
+i {
+  font-size: 14px;
+}
+
+i:hover {
+  color: red;
+}
+
+.select {
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #a9907e;
+  color: #eaeaea;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: grey;
+  color: #eaeaea;
+}

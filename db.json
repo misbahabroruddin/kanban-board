@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "title": "React JS",
+      "description": "one of the most popular javascript framework",
+      "status": "to do",
+      "id": 1
+    },
+    {
+      "title": "Devland",
+      "description": "Digital Talent Indonesia",
+      "status": "to do",
+      "id": 2
+    },
+    {
+      "title": "Express JS",
+      "description": "One of the most popular backend framework",
+      "status": "to do",
+      "id": 3
+    },
+    {
+      "title": "asdaw",
+      "description": "asdwa",
+      "status": "to do",
+      "id": 4
+    }
+  ]
+}
