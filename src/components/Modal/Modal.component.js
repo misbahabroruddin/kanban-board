@@ -1,15 +1,22 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { styled, Box } from "@mui/system";
-import Modal from "@mui/base/Modal";
-import FormTask from "../FormTask/FormTask.component";
-import { Typography } from "@mui/material";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
+import { styled, Box } from '@mui/system';
+import { Modal } from '@mui/base/Modal';
+import FormTask from '../FormTask/FormTask.component';
+import { Typography } from '@mui/material';
 
-export default function ModalForm({ onChange, onSubmit, title, desc, status }) {
-  const [open, setOpen] = React.useState(false);
+export default function ModalForm({
+  onChange,
+  onSubmit,
+  title,
+  desc,
+  status,
+  setOpen,
+  open,
+  handleClose,
+}) {
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   const handleCloseOnSubmit = (e) => {
     onSubmit(e);
@@ -33,7 +40,7 @@ export default function ModalForm({ onChange, onSubmit, title, desc, status }) {
             id='modal-modal-title'
             variant='h6'
             component='h2'
-            sx={{ pb: 2, textAlign: "center" }}
+            sx={{ pb: 2, textAlign: 'center' }}
           >
             Add new task
           </Typography>
@@ -54,7 +61,7 @@ const Backdrop = React.forwardRef((props, ref) => {
   const { open, className, ...other } = props;
   return (
     <div
-      className={clsx({ "MuiBackdrop-open": open }, className)}
+      className={clsx({ 'MuiBackdrop-open': open }, className)}
       ref={ref}
       {...other}
     />
@@ -67,22 +74,22 @@ Backdrop.propTypes = {
 };
 
 const blue = {
-  200: "#99CCF3",
-  400: "#3399FF",
-  500: "#007FFF",
+  200: '#99CCF3',
+  400: '#3399FF',
+  500: '#007FFF',
 };
 
 const grey = {
-  50: "#ff2e63",
-  100: "#eaeef2",
-  200: "#d0d7de",
-  300: "#afb8c1",
-  400: "#8c959f",
-  500: "#6e7781",
-  600: "#57606a",
-  700: "#424a53",
-  800: "#ff2e63",
-  900: "#24292f",
+  50: '#ff2e63',
+  100: '#eaeef2',
+  200: '#d0d7de',
+  300: '#afb8c1',
+  400: '#8c959f',
+  500: '#6e7781',
+  600: '#57606a',
+  700: '#424a53',
+  800: '#ff2e63',
+  900: '#24292f',
 };
 
 const StyledModal = styled(Modal)`
@@ -110,16 +117,16 @@ const StyledBackdrop = styled(Backdrop)`
 
 const style = (theme) => ({
   width: 400,
-  borderRadius: "12px",
-  padding: "16px 32px 24px 32px",
-  backgroundColor: theme.palette.mode === "dark" ? "#0A1929" : "#252A34",
-  color: "#eaeaea",
+  borderRadius: '12px',
+  padding: '16px 32px 24px 32px',
+  backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : '#252A34',
+  color: '#eaeaea',
   boxShadow: `0px 2px 24px ${
-    theme.palette.mode === "dark" ? "#000" : "#383838"
+    theme.palette.mode === 'dark' ? '#000' : '#383838'
   }`,
 });
 
-const TriggerButton = styled("button")(
+const TriggerButton = styled('button')(
   ({ theme }) => `
   font-family: IBM Plex Sans, sans-serif;
   font-size: 0.8rem;
@@ -135,14 +142,14 @@ const TriggerButton = styled("button")(
   cursor: pointer;
 
   &:hover {
-    background: ${theme.palette.mode === "dark" ? grey[800] : grey[50]};
+    background: ${theme.palette.mode === 'dark' ? grey[800] : grey[50]};
     color: #eaeaea;
-    border-color: ${theme.palette.mode === "dark" ? grey[600] : grey[300]};
+    border-color: ${theme.palette.mode === 'dark' ? grey[600] : grey[300]};
   }
 
   &:focus-visible {
     border-color: ${blue[400]};
-    outline: 3px solid ${theme.palette.mode === "dark" ? blue[500] : blue[200]};
+    outline: 3px solid ${theme.palette.mode === 'dark' ? blue[500] : blue[200]};
   }
   `
 );

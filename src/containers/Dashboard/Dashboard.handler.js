@@ -1,5 +1,5 @@
-import axios from "axios";
-import config from "../../constants";
+import axios from 'axios';
+import config from '../../constants';
 
 const { BASE_URL } = config;
 
@@ -34,7 +34,27 @@ const deleteTask = async (id) => {
   try {
     const { data } = await axios.delete(`${BASE_URL}/tasks/${id}`);
     return await data;
-  } catch (e) {}
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const fetchById = async (id) => {
+  try {
+    const { data } = await axios.get(`${BASE_URL}/tasks/${id}`);
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const updateTask = async (id) => {
+  try {
+    const { data } = await axios.put(`${BASE_URL}/tasks/${id}`);
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 export default {
@@ -42,4 +62,6 @@ export default {
   createTask,
   updateStatus,
   deleteTask,
+  fetchById,
+  updateTask,
 };
